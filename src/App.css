@@ -1,16 +1,24 @@
-.App {
-  /* text-align: center; */
+/* App.css */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
+.pokemon-info {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Add any additional global styles here */
 
 

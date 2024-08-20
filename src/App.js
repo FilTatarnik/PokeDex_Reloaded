@@ -3,6 +3,7 @@ import Pokedex from 'pokedex-promise-v2';
 import SearchBar from './components/SearchBar';
 import PokemonInfo from './components/PokemonInfo';
 import Footer from './components/Footer';
+import './App.css';
 
 const P = new Pokedex();
 

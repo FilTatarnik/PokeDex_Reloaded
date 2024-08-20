@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import './PokemonInfo.css';
 
-const SearchBar = ({ onSearch }) => {
+
+const SearchBar = ({ onSearch, theme }) => {
   const [query, setQuery] = useState('');
 
   const handleSubmit = (e) => {
@@ -9,15 +11,21 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search for a Pokemon..."
-      />
-      <button type="submit">Search</button>
-    </form>
+    <div className="search-bar-container" style={{ backgroundColor: theme.secondary }}>
+      <form onSubmit={handleSubmit} className="search-form">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Enter Pokemon name"
+          className="search-input"
+          style={{ backgroundColor: theme.textLight, color: theme.textDark }}
+        />
+        <button type="submit" className="search-button" style={{ backgroundColor: theme.accent, color: theme.textLight }}>
+          Search
+        </button>
+      </form>
+    </div>
   );
 };
 
