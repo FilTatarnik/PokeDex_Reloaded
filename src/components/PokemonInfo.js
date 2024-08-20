@@ -1,35 +1,23 @@
 import React from 'react';
 import './PokemonInfo.css';
 
-const PokemonInfo = ({ pokemon, spriteColor }) => {
-  const formatColor = (color) => {
-    if (!color) return 'N/A';
-    if (Array.isArray(color)) return color.join(', ');
-    if (typeof color === 'object') return `${color.r}, ${color.g}, ${color.b}`;
-    return color;
-  };
-
+const PokemonInfo = ({ pokemon, spriteColors }) => {
   return (
     <div className="pokemon-info">
       <h2>{pokemon.name}</h2>
       <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-      {spriteColor && (
-        <div className="color-info" style={{ backgroundColor: spriteColor.hex }}>
-          <h3>Color Information:</h3>
-          <p>Hex: {spriteColor.hex}</p>
-          <p>RGB: {formatColor(spriteColor.rgb)}</p>
-          <p>RGBA: {formatColor(spriteColor.rgba)}</p>
-          <p>Is Dark: {spriteColor.isDark ? 'Yes' : 'No'}</p>
+      {spriteColors && (
+        <div className="color-info">
+          <h3>Color Palette:</h3>
+          <div className="color-grid">
+            {spriteColors.map((color, index) => (
+              <div key={index} className="color-swatch" style={{ backgroundColor: color }}>
+                <span>{color}</span>
+              </div>
+            ))}
+          </div>
         </div>
       )}
-
-    <div className="color-grid">
-        <div className="color-swatch" style={{backgroundColor: spriteColor.hex}}>
-        {spriteColor.hex}
-        </div>
-        {/* Add more swatches here if needed */}
-    </div>
-
       <div className="stats">
         <h3>Stats:</h3>
         <ul>

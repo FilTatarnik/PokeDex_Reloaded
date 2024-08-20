@@ -22,22 +22,46 @@
 }
 
 .color-info {
+  background-color: #1e1e1e;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
-  color: white;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
 .color-info h3 {
+  color: white;
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 1.2em;
 }
 
-.color-info p {
-  margin: 5px 0;
-  font-size: 0.9em;
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.color-swatch {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  font-size: 0.8em;
+  position: relative;
+  overflow: hidden;
+}
+
+.color-swatch span {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2px 5px;
+  border-radius: 3px;
 }
 
 .stats, .abilities, .types {
@@ -64,29 +88,4 @@ ul {
 li {
   margin-bottom: 5px;
   font-size: 0.9em;
-}
-
-/* Color swatch style for the second image look */
-.color-swatch {
-  display: inline-block;
-  width: calc(33.333% - 10px);
-  margin: 5px;
-  aspect-ratio: 1 / 1;
-  border-radius: 8px;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-  line-height: 1.2;
-  padding-top: 15px;
-  box-sizing: border-box;
-  vertical-align: top;
-}
-
-/* Adjusting the layout for color swatches */
-.color-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 15px;
 }
