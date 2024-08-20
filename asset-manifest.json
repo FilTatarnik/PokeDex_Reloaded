@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FilTatarnik/PokeDex_Reloaded/static/css/main.ebe06b73.css",
+    "main.js": "/FilTatarnik/PokeDex_Reloaded/static/js/main.e4808df6.js",
+    "static/js/453.7b263c9d.chunk.js": "/FilTatarnik/PokeDex_Reloaded/static/js/453.7b263c9d.chunk.js",
+    "index.html": "/FilTatarnik/PokeDex_Reloaded/index.html",
+    "main.ebe06b73.css.map": "/FilTatarnik/PokeDex_Reloaded/static/css/main.ebe06b73.css.map",
+    "main.e4808df6.js.map": "/FilTatarnik/PokeDex_Reloaded/static/js/main.e4808df6.js.map",
+    "453.7b263c9d.chunk.js.map": "/FilTatarnik/PokeDex_Reloaded/static/js/453.7b263c9d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ebe06b73.css",
+    "static/js/main.e4808df6.js"
+  ]
+}
